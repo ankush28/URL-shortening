@@ -1,0 +1,525 @@
+/* GLOBAL STYLES */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+}
+
+p {
+    font-size: 1.6rem;
+    color: var(--grayish-violet);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+/* VARIABLES */
+:root {
+    --cyan: hsl(180, 66%, 49%);
+    --dark-violet: hsl(257, 27%, 26%);
+    --gray: hsl(0, 0%, 75%);
+    --dark-grey: #EFF1F7;
+    --grayish-violet: hsl(260, 7%, 59%);
+    --very-dark-blue: hsl(255, 11%, 22%);
+    --very-dark-violet: hsl(260, 8%, 14%);
+    --white: #fff;
+}
+
+/* UTILITY CLASSES */
+.u-mb-small {
+    margin-bottom: 1.6rem;
+}
+
+.u-mb-medium {
+    margin-bottom: 3rem;
+}
+
+.u-mb-large {
+    margin-bottom: 5rem;
+}
+
+/* ------------------Header Section------------------------ */
+/* ------------------Header Section------------------------ */
+/* ------------------Header Section------------------------ */
+
+header{
+    width: 100%;
+    height: 7.5rem;
+    padding: 3.5rem 0;
+    position: relative;
+}
+.logo{
+    height: 3.5rem;
+    margin-right: 3rem;
+}
+.check{
+   width: 21px;
+   height: 23px;
+   display: none;
+}
+.hamburger{
+    display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-ul{
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav-ul li {
+    list-style: none;
+    padding: 0 1.5rem;
+}
+
+.nav-ul li a,
+.login a:first-child{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: hsl(260, 7%, 59%);
+    font-weight: 500;
+}
+
+.login a:first-child{
+    margin-right: 1.4rem;
+}
+
+.nav-ul li a:hover,
+.login a:hover:first-child{
+    color: hsl(257, 27%, 26%);
+}
+
+.u-login{
+    display: none;
+}
+
+.btn{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: hsl(180, 66%, 49%);
+    padding: 1rem 2rem;
+    color: var(--white);
+    border-radius: 5rem;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.btn:hover{
+    opacity: 0.7;
+}
+
+/* ------------------INTRO-SECTION------------------------ */
+/* ------------------INTRO-SECTION------------------------ */
+/* ------------------INTRO-SECTION------------------------ */
+
+.intro-section{
+    padding-bottom: 10rem;
+    overflow: hidden;
+}
+.intro{
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-text{
+    width: 45%;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intro-text h1{
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--dark-violet);
+}
+
+.intro-text h1 span{
+    display: block;
+}
+.btn-large{
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.2rem 3.5rem;
+}
+.intro-images{
+    width:50%;
+}
+
+
+/* -----------------------INPUT ABOUT AND FEATURE SECTION -----------------------------------------*/
+.input-section{
+    background-color: var(--dark-grey);
+}
+
+.input-box{
+    background-color: var(--dark-violet);
+    max-width: 100rem;
+    margin: 0 auto;
+    padding:  5rem;
+    background-image: url(./images/bg-shorten-desktop.svg);
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    transform: translateY(-90%);
+}
+
+.input-box form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.input-box form input{
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    border: transparent;
+    border-radius: .5rem;
+    margin-right: 2rem;
+    outline: none;
+}
+
+.input-box form .link-btn{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: hsl(180, 66%, 49%);
+    width: 20%;
+    border: transparent;
+    border-radius: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+/* ----------------------ABOUT------------------- */
+.about{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.about h2{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--dark-violet);
+}
+
+
+/* ---------------------FEATURE--------------------*/
+.feature{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 100px;
+}
+
+.feature::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 50%;
+    height: .5rem;
+    background-color: var(--cyan);
+    z-index: 0;
+}
+
+.feature-box{
+    position: relative;
+    background-color: var(--white);
+    padding: 7rem 3rem 3rem 3rem;
+    border-radius: .5rem;
+    z-index: 1;
+}
+
+.feature-box:not(:last-child){
+    margin-right: 2.5rem;
+}
+
+.feature-img{
+    display: inline-block;
+    background-color: var(--dark-violet);
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: -3.5rem;
+    left: 2.5rem;
+}
+.feature-box h3{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    color: var(--dark-violet);
+    padding-bottom: 2.5rem;
+}
+.box2{
+    margin-top: 4%;
+}
+.box3{
+    margin-top: 8%;
+}
+
+
+.shorten-output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 3px 3px 3px rgb(191 191 191 / 10%);
+    border-radius: 5px;
+    font-size: 22px;
+    margin-bottom: 15px;
+    transform: translateY(-170%);
+}
+
+.srt{
+    display: flex;
+    justify-content: space-between;
+}
+.shorten-long-link {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 30px;
+    font-weight: 500;
+}
+.shorten-short-link {
+    color: hsl(180, 66%, 49%);
+    margin-right: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.shorten-output button {
+    /* border-radius: 5px;
+    width: 100px;
+    padding: 12px;
+    font-size: 15px; */
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: hsl(180, 66%, 49%);
+    border: transparent;
+    border-radius: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    padding: 1.5rem;
+    
+}
+#shorten-output{
+    display: none;
+}
+.shorten-output button::after {
+    content: "Copy";
+}
+/*-------------------MEDIA QUERIES --------------------------*/
+
+/* -----------------------------------------------------TABLET SIZE---------------------------------------------- */
+@media screen and (max-width: 985px){
+    /* ------------------INTRO-SECTION-------------------- */
+    .intro-text{
+        width: 50%;
+    }
+    .intro-text h1{
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+
+    /* ------------------ABOUT-SECTION-------------------- */
+    .about{
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+
+    .about h2{
+        font-size: 3rem;
+    }
+    .feature-box{
+        padding: 7rem 2rem 3rem 2rem;
+    }
+
+    .feature-box:not(:last-child){
+        margin-right: 1.5rem;
+    }
+}
+
+/* -----------------------------------------------------MOBILE RESPONSIVE---------------------------------------------- */
+@media screen and (max-width: 630px){
+    .shorten-output{
+        justify-content: center;
+    }
+    .shorten-long-link{
+        display: none;
+    }
+    .input-box{
+        margin-top: 12rem;
+    }
+    .input-box form{
+        flex-direction: column;
+    }
+    header{
+        height: 9rem;
+    }
+    .logo{
+        margin: 0;
+    }
+
+    .login{
+        display: none;
+    }
+    .hamburger{
+        display: inline-block;
+        position: absolute;
+        top: 3.2rem;
+        right: 2rem;
+        cursor: pointer;
+        height: 28px;
+    }
+    .nav-ul{
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        padding: 1rem 0;
+        margin-top: 4rem;
+        background-color: whitesmoke;
+        border: 1px solid skyblue;
+        border-radius: .3rem;
+        transform: translateY(-250%);
+        transition: all .5s;
+        z-index: 99;
+    }
+    .nav-ul li{
+        padding: 1rem 0;
+        font-size: 1.6rem;
+    }
+    .u-login{
+        display: inline-block;
+        margin: 5px;
+    }
+    .btn-signup a{
+        background-color: hsl(180, 66%, 49%);
+        color: white!important;
+        padding: .8rem 1.6rem;
+        border-radius: 5rem;
+        opacity: 1;
+        transition: all .3s
+    }
+    .btn-login a{
+        border: 1px solid hsl(180, 66%, 49%);
+        padding: .8rem 1.6rem;
+        border-radius: 5rem;
+        opacity: 1;
+        transition: all .3s;
+    }
+
+    .btn-signup a:hover{
+        opacity: 0.8;
+        background-color: white;
+        border: 1px solid hsl(180, 66%, 49%);
+        color: hsl(260, 7%, 59%)!important;
+    }
+    .btn-login a:hover{
+        opacity: 0.8;
+        background-color: hsl(180, 66%, 49%);
+        color: white!important;
+    }
+    /* =====.hamburger Logic======= */
+
+    #toggle:checked ~ .nav-ul{
+        transform: translateY(1%);
+    }
+
+    /* ------------------INTRO-SECTION-------------------- */
+    .intro{
+        flex-direction: column-reverse;
+    }
+    .intro-images{
+        padding-bottom: 4rem;
+    }
+    .intro-text{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 4rem 0;
+    }
+    .feature{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .feature::after{
+        left: 50%;
+        top: 20%;
+        height: 50rem;
+        width: .5rem;
+    }
+
+    .feature-box{
+        margin-bottom: 6rem;
+    }
+    .feature-box:not(:last-child){
+        margin-right: 0;
+    }
+    .feature-img{
+        left: 50%;
+        transform: translateX(-45%);
+    }
+    .about{
+        transform: translateY(-45%);
+    }
+    .input-box form .link-btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .input-box form input{
+        width: 100%;
+    }
+    .input-box{
+        padding: 3rem;
+        border-radius: 1rem;
+    }
+    .box2,
+    .box3{
+        margin-top: 0;
+    }
+    .intro-section{
+        padding-bottom: 5rem;
+    }
+
+}
