@@ -14,7 +14,7 @@ Users should be able to:
 - The `input` field is empty
 
 ### Links
-Live Site URL: []
+Live Site URL: [Click here](affectionate-clarke-de8cc2.netlify.app)
 
 ## My process
 
