@@ -7,8 +7,6 @@ var x = document.getElementById("shorten-output");
 button.addEventListener('click', function(){
       if (x.style.display === "none") {
       x.style.display = "block";
-      } else {
-      x.style.display = "none";
       }
     fetch('https://api.shrtco.de/v2/shorten?url='+inputValue.value)
     .then(response => response.json())
