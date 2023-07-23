@@ -6,7 +6,7 @@ resultContainer.style.display = 'none';
       method: 'POST',
       headers: {
         'content-type': 'application/x-www-form-urlencoded',
-        'X-RapidAPI-Key': process.env.API_KEY,
+        'X-RapidAPI-Key': 'c35eae6ae6mshe41aad097ab86b9p139074jsn46d122d508cc',
         'X-RapidAPI-Host': 'url-shortener-service.p.rapidapi.com'
       },
       body: new URLSearchParams({
