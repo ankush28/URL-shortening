@@ -1,21 +1,49 @@
-var button = document.querySelector('.link-btn')
-var inputValue = document.querySelector('.input')
-var originalLink = document.querySelector('.shorten-long-link');
-var shortLink = document.querySelector('.shorten-short-link');
-var x = document.getElementById("shorten-output");
-
-button.addEventListener('click', function(){
-      if (x.style.display === "none") {
-      x.style.display = "block";
-      }
-    fetch('https://api.shrtco.de/v2/shorten?url='+inputValue.value)
-    .then(response => response.json())
-    .then(data => {
-        var orignalValue = data['result']['original_link'];
-        var shortValue = data['result']['full_short_link'];        
-        originalLink.innerHTML = orignalValue;
-        shortLink.innerHTML = shortValue;
-        console.log("shortValue");
-    })
-
-});
+const resultContainer = document.getElementById('resultContainer');
+resultContainer.style.display = 'none';
+  document.getElementById('apiButton').addEventListener('click', async () => {
+    const url = 'https://url-shortener-service.p.rapidapi.com/shorten';
+    const options = {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'X-RapidAPI-Key': API_KEY,
+        'X-RapidAPI-Host': 'url-shortener-service.p.rapidapi.com'
+      },
+      body: new URLSearchParams({
+        url: 'https://google.com/'
+      })
+    };
+  
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      const fresult = result.result_url;
+      console.log(result);
+  
+      const resultContainer = document.getElementById('resultContainer');
+      const resultText = document.getElementById('resultText');
+      const copyButton = document.getElementById('copyButton');
+  
+      resultContainer.style.display = 'flex'; 
+      resultText.textContent = fresult;     
+  
+      copyButton.addEventListener('click', () => {
+        copyToClipboard(resultText.textContent);
+        alert('Copied to clipboard!');
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  });
+  function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+  
